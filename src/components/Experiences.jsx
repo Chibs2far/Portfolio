@@ -38,7 +38,7 @@ export default function Experiences() {
                 <span className="pointer-events-none absolute left-1/2 top-1/2 hidden size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-400 bg-slate-950 shadow-[0_0_18px_rgba(76,29,149,0.35)] lg:block" />
                 
                 <article
-                  className={`relative col-span-3 overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-900/50 p-6 shadow-lg shadow-slate-950/20 backdrop-blur lg:col-span-1 ${cardAlignment}text-left`}
+                  className={`relative col-span-3 overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-900/50 p-6 shadow-lg shadow-slate-950/20 backdrop-blur lg:col-span-1 ${cardAlignment} text-left`}
                 >
                   <header className="space-y-3">
                     <p className="text-xs font-semibold uppercase tracking-[0.35em] text-violet-300/70">

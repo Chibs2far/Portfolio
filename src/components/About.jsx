@@ -26,7 +26,7 @@ export default function About() {
           handle={about?.profileCard?.handle}
           status={about?.profileCard?.status}
           contactText={about?.profileCard?.contactText}
-          avatarUrl="/images/profile-avatar.png"
+          avatarUrl={about?.profileCard?.avatar}
           showUserInfo={false}
           enableTilt
           enableMobileTilt={false}

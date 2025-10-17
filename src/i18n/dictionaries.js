@@ -1,3 +1,6 @@
+import educationDashboardImg from '../assets/images/projects/education-dashboard.jpg'
+import profileAvatarImg from '../assets/images/profile-avatar.png'
+
 export const dictionaries = {
   tr: {
     header: {
@@ -33,6 +36,7 @@ export const dictionaries = {
         handle: 'furkandüzköprü',
         status: 'Freelance projelere açık',
         contactText: 'İletişime geç',
+        avatar: profileAvatarImg,
       },
     },
     experiences: {
@@ -120,7 +124,7 @@ export const dictionaries = {
           ],
           technologies: ['React', 'Recharts', 'Radix UI', 'TypeScript'],
           link: null,
-          image: '/images/projects/education-dashboard.jpg',
+          image: educationDashboardImg,
         },
         {
           title: 'Mikro Animasyon Kütüphanesi',
@@ -188,6 +192,7 @@ export const dictionaries = {
         handle: 'furkanduzkopru',
         status: 'Open for freelance work',
         contactText: 'Contact',
+        avatar: profileAvatarImg,
       },
     },
     experiences: {
@@ -275,7 +280,7 @@ export const dictionaries = {
           ],
           technologies: ['React', 'Recharts', 'Radix UI', 'TypeScript'],
           link: null,
-          image: '/images/projects/education-dashboard.jpg',
+          image: educationDashboardImg,
         },
         {
           title: 'Micro Animation Library',
