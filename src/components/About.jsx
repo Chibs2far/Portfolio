@@ -7,7 +7,7 @@ export default function About() {
 
   return (
     <section id="about" className="space-y-6">
-      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-300/70">
+      <p className="text-base font-semibold uppercase tracking-[0.28em] text-violet-300/80 sm:text-lg">
         {about?.sectionLabel}
       </p>
       <div className="grid gap-10 lg:grid-cols-[3fr,2fr] lg:items-start">

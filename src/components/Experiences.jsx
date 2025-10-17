@@ -12,10 +12,10 @@ export default function Experiences() {
   return (
     <section id="experience" className="space-y-10">
       <div className="space-y-3">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-300/70">
+        <p className="text-base font-semibold uppercase tracking-[0.28em] text-violet-300/80 sm:text-lg">
           {experiences?.sectionLabel}
         </p>
-        <h2 className="max-w-3xl text-3xl font-semibold text-slate-100">
+        <h2 className="max-w-3xl text-3xl font-semibold text-slate-100 md:text-4xl">
           {experiences?.heading}
         </h2>
       </div>

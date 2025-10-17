@@ -10,10 +10,10 @@ export default function Contact() {
       className="rounded-3xl border border-violet-500/20 bg-slate-900/40 p-10"
     >
       <div className="space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-300/70">
+        <p className="text-base font-semibold uppercase tracking-[0.28em] text-violet-300/80 sm:text-lg">
           {contact?.sectionLabel}
         </p>
-        <h2 className="text-3xl font-semibold text-slate-100">
+        <h2 className="text-3xl font-semibold text-slate-100 md:text-4xl">
           {contact?.heading}
         </h2>
         <p className="max-w-2xl text-sm text-slate-200/80">

@@ -1,5 +1,7 @@
 import educationDashboardImg from '../assets/images/projects/education-dashboard.jpg'
 import profileAvatarImg from '../assets/images/profile-avatar.png'
+import portfolioExperienceImg from '../assets/images/projects/portfolio-experience.jpg'
+import microAnimationsImg from '../assets/images/projects/micro-animations.jpg'
 
 export const dictionaries = {
   tr: {
@@ -98,6 +100,7 @@ export const dictionaries = {
           title: 'Portfolio Deneyimi',
           description:
             'Kişisel marka hikayesini görsel etkileşimlerle anlatan landing page. GSAP ile sahne geçişleri ve scroll tabanlı animasyonlar içeriyor.',
+          timeframe: '2024',
           stack: ['React', 'GSAP', 'TailwindCSS'],
           longDescription:
             'Marka hikayesini anlatan tek sayfalık deneyim; animasyonlu sahneler ve kullanıcı etkileşimini takip eden içerik blokları ile destekleniyor.',
@@ -108,12 +111,13 @@ export const dictionaries = {
           ],
           technologies: ['React', 'GSAP', 'Tailwind CSS', 'Vite'],
           link: 'https://github.com/furkanduzkopru',
-          image: '/images/projects/portfolio-experience.jpg',
+          image: portfolioExperienceImg,
         },
         {
           title: 'Eğitim Platformu Dashboard',
           description:
             'Gerçek zamanlı veri görselleştirmeleri ve özelleştirilebilir bileşenlerle tasarlanmış yönetim paneli prototipi.',
+          timeframe: '2023',
           stack: ['React', 'Recharts', 'Radix UI'],
           longDescription:
             'Eğitim yöneticileri için eğitmen, modül ve öğrenci performanslarını tek panelden takip etmeyi kolaylaştıran bir kontrol merkezi.',
@@ -130,6 +134,7 @@ export const dictionaries = {
           title: 'Mikro Animasyon Kütüphanesi',
           description:
             'Çeşitli mikro etkileşimleri tek çatı altında toplayan yeniden kullanılabilir animasyon paketleri.',
+          timeframe: '2022',
           stack: ['React', 'GSAP', 'Storybook'],
           longDescription:
             'Ürün ekiplerinin hızlıca prototip hazırlayabilmesi için tasarlanmış, yeniden kullanılabilir animasyon koleksiyonu ve Storybook dokümantasyonu.',
@@ -140,7 +145,7 @@ export const dictionaries = {
           ],
           technologies: ['React', 'GSAP', 'Storybook', 'Framer Motion'],
           link: null,
-          image: '/images/projects/micro-animations.jpg',
+          image: microAnimationsImg,
         },
       ],
     },
@@ -254,6 +259,7 @@ export const dictionaries = {
           title: 'Portfolio Experience',
           description:
             'A landing page that tells a personal brand story with visual interactions. Features scene transitions and scroll-based animations powered by GSAP.',
+          timeframe: '2024',
           stack: ['React', 'GSAP', 'TailwindCSS'],
           longDescription:
             'A narrative-driven personal portfolio experience with scroll-triggered scenes, parallax layers, and reusable animated components.',
@@ -264,12 +270,13 @@ export const dictionaries = {
           ],
           technologies: ['React', 'GSAP', 'Tailwind CSS', 'Vite'],
           link: 'https://github.com/furkanduzkopru',
-          image: '/images/projects/portfolio-experience.jpg',
+          image: portfolioExperienceImg,
         },
         {
           title: 'Education Platform Dashboard',
           description:
             'A management dashboard prototype featuring real-time data visualisations and customisable components.',
+          timeframe: '2023',
           stack: ['React', 'Recharts', 'Radix UI'],
           longDescription:
             'A control center for education teams to monitor instructors, modules, and learner performance from a single unified interface.',
@@ -286,6 +293,7 @@ export const dictionaries = {
           title: 'Micro Animation Library',
           description:
             'Reusable animation packs that consolidate a wide range of micro-interactions in a single place.',
+          timeframe: '2022',
           stack: ['React', 'GSAP', 'Storybook'],
           longDescription:
             'A collection of reusable motion presets to speed up prototyping, packaged with Storybook for live documentation.',
@@ -296,7 +304,7 @@ export const dictionaries = {
           ],
           technologies: ['React', 'GSAP', 'Storybook', 'Framer Motion'],
           link: null,
-          image: '/images/projects/micro-animations.jpg',
+          image: microAnimationsImg,
         },
       ],
     },

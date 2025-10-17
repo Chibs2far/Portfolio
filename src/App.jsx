@@ -9,7 +9,7 @@ import Lightning from './components/Lightning'
 
 function App() {
   return (
-    <div id="top" className="relative min-h-screen bg-slate-950 text-slate-100">
+    <div id="top" className="relative min-h-screen overflow-x-hidden bg-slate-950 text-slate-100">
       <div className="relative isolate pb-24">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <Lightning hue={260} xOffset={0} speed={0.9} intensity={1} size={1.1} />
