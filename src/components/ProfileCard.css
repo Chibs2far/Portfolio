@@ -363,12 +363,16 @@
   top: 3em;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .pc-details h3 {
   font-weight: 600;
   margin: 0;
   font-size: min(5svh, 3em);
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  white-space: nowrap;
   background-image: linear-gradient(to bottom, #e5e7ff, #7c83f3);
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
@@ -379,11 +383,13 @@
 .pc-details p {
   font-weight: 600;
   position: relative;
-  top: -12px;
-  white-space: nowrap;
+  top: -2px;
+  white-space: normal;
   font-size: 16px;
-  margin: 0 auto;
-  width: min-content;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  margin: 0;
+  max-width: clamp(24ch, 40vw, 26ch);
+  text-align: center;
   background-image: linear-gradient(to bottom, #f0f4ff, #5d65d7);
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
@@ -425,14 +431,15 @@
 
   .pc-details {
     top: 2em;
+    gap: 0.4rem;
   }
 
   .pc-details h3 {
-    font-size: min(4svh, 2.5em);
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
   }
 
   .pc-details p {
-    font-size: 14px;
+    font-size: clamp(0.9rem, 2.6vw, 1rem);
   }
 
   .pc-user-info {
@@ -473,15 +480,16 @@
 
   .pc-details {
     top: 1.5em;
+    gap: 0.35rem;
   }
 
   .pc-details h3 {
-    font-size: min(3.5svh, 2em);
+    font-size: clamp(1rem, 5.2vw, 1.35rem);
   }
 
   .pc-details p {
-    font-size: 12px;
-    top: -8px;
+    font-size: clamp(0.85rem, 3.2vw, 0.95rem);
+    top: -4px;
   }
 
   .pc-user-info {

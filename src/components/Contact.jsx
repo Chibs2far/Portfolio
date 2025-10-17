@@ -20,8 +20,8 @@ export default function Contact() {
           {contact?.body}
         </p>
       </div>
-      <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-2 text-sm text-slate-200">
+      <div className="mt-8 grid gap-6 text-sm text-slate-200 sm:grid-cols-2">
+        <div className="space-y-2">
           <p className="font-semibold text-slate-100">{contact?.emailLabel}</p>
           <a
             href={`mailto:${contact?.emailValue}`}
@@ -30,12 +30,15 @@ export default function Contact() {
             {contact?.emailValue}
           </a>
         </div>
-        <a
-          href={`mailto:${contact?.emailValue}`}
-          className="inline-flex items-center justify-center rounded-full border border-violet-400/70 px-6 py-3 text-sm font-semibold text-violet-300 transition hover:border-violet-300 hover:text-violet-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300"
-        >
-          {contact?.cta}
-        </a>
+        <div className="space-y-2">
+          <p className="font-semibold text-slate-100">{contact?.phoneLabel}</p>
+          <a
+            href={`tel:${contact?.phoneValue?.replace(/[^+\d]/g, '')}`}
+            className="text-violet-300 transition hover:text-violet-200"
+          >
+            {contact?.phoneValue}
+          </a>
+        </div>
       </div>
     </section>
   )

@@ -2,6 +2,9 @@ import educationDashboardImg from '../assets/images/projects/education-dashboard
 import profileAvatarImg from '../assets/images/profile-avatar.png'
 import portfolioExperienceImg from '../assets/images/projects/portfolio-experience.jpg'
 import microAnimationsImg from '../assets/images/projects/micro-animations.jpg'
+import divizyonLogo from '../assets/images/experiences/divizyon_logo.jpeg'
+import halkbankLogo from '../assets/images/experiences/halkbank_logo.jpeg'
+import inspireLogo from '../assets/images/experiences/inspire_foundation_malta__logo.jpeg'
 
 export const dictionaries = {
   tr: {
@@ -46,40 +49,46 @@ export const dictionaries = {
       heading: 'Takımlarla büyüyen ve iz bırakan işbirlikleri.',
       items: [
         {
-          role: 'Kıdemli Frontend Developer',
-          company: 'Studio Nova',
-          timeframe: '2023 – 2024',
+          role: 'Intern',
+          company: 'Halkbank',
+          timeframe: 'Sep 2025 – Oct 2025',
+          location: 'İstanbul, Türkiye · On-site',
           description:
-            'Ürün ekipleriyle yakın çalışarak modüler tasarım sistemleri ve yüksek performanslı arayüzler geliştirdim.',
+            'COBOL tabanlı legacy sistemlerden modern MSSQL veritabanlarına veri migrasyonu için ETL süreçleri geliştirdim. Sahadaki operasyonların verimliliğini artırmak adına Android platformunda donanım etkileşimli özellikler tasarladım ve uyguladım.',
           achievements: [
-            'SaaS tasarım sisteminde bileşen tekrar kullanımını %100 artırdım.',
-            'GSAP ve WebGL tabanlı mikro etkileşimlerle conversions oranını %18 yükselttim.',
+            'Taşınabilir yazıcılar gibi çevresel cihazlarla Bluetooth üzerinden kablosuz iletişimi mümkün kılan modüller geliştirdim.',
+            'Yerel kamera API\'leri ile gerçek zamanlı QR kod tarama ve işleme işlevlerini hayata geçirdim.',
           ],
-          technologies: ['React', 'TypeScript', 'Tailwind', 'GSAP'],
+          technologies: ['COBOL', 'SQL', 'Android'],
+          logo: halkbankLogo,
         },
         {
-          role: 'Frontend Consultant',
-          company: 'Atlas Tech',
-          timeframe: '2021 – 2023',
+          role: 'IT Specialist | Frontend Developer',
+          company: 'Divizyon',
+          timeframe: 'Oct 2024 – Sep 2025',
+          location: 'Türkiye · On-site',
           description:
-            'Kurumsal paneller ve müşteri portalları için uçtan uca geliştirme sorumluluğu üstlendim.',
+            'Donanım ve ağ altyapısının sorunsuz çalışması için IT desteği ve sistem yönetimi sağladım. Modern web teknolojileri kullanarak şirketin web uygulamalarının frontend taraflarını geliştirdim ve bakımını yürüttüm.',
           achievements: [
-            'Design-to-code sürecine Figma token entegrasyonu ile teslim sürelerini %30 kısalttım.',
-            'CI hattına görsel regresyon testleri ekleyerek prod hatalarını azalttım.',
+            'Kullanıcı arayüzü tasarımları ve bileşen kütüphaneleri oluşturarak ekiplerin geliştirme hızını yükselttim.',
+            'PostgreSQL tabanlı veri yapıları üzerinde çalışarak iş süreçlerini dijitalleştirdim.',
           ],
-          technologies: ['React', 'Styled Components', 'Storybook', 'Jest'],
+          technologies: ['UI Design', 'PostgreSQL', 'React'],
+          logo: divizyonLogo,
         },
         {
-          role: 'Frontend Developer',
-          company: 'Freelance',
-          timeframe: '2018 – 2021',
+          role: 'Volunteer',
+          company: 'Inspire Foundation (Malta)',
+          timeframe: 'Dec 2023 – Sep 2024',
+          location: 'Malta · On-site',
           description:
-            'Start-up ve ajansların landing page, dashboard ve etkileşimli deneyim ihtiyaçlarını karşıladım.',
+            'Inspire Malta\'da gönüllü olarak engelli bireyler için eğitimsel ve terapötik programları destekledim. Çeşitlilik içeren multidisipliner ortamda kültürler arası iletişim, takım çalışması ve problem çözme becerileri geliştirdim.',
           achievements: [
-            '10+ markanın lansman sitesini iki haftadan kısa sürede yayına aldım.',
-            'SEO ve Lighthouse skorlarını ortalama 90+ seviyesine taşıdım.',
+            'Birebir destek ve grup etkinlikleri ile terapötik programların etkisini artırdım.',
+            'Katılımcılar için özelleştirilmiş öğrenme materyalleri ve aktiviteler hazırladım.',
           ],
-          technologies: ['Next.js', 'Framer Motion', 'SCSS', 'Netlify'],
+          technologies: ['Adaptasyon', 'İngilizce'],
+          logo: inspireLogo,
         },
       ],
     },
@@ -156,6 +165,8 @@ export const dictionaries = {
         'Fikirlerini paylaşmak ya da potansiyel proje detaylarını konuşmak istersen, kısa bir not bırakman yeterli.',
       emailLabel: 'E-posta',
       emailValue: 'hello@furkan.dev',
+      phoneLabel: 'Telefon',
+      phoneValue: '+90 542 413 9180',
       cta: 'Mesaj Gönder',
     },
     footer: {
@@ -205,40 +216,46 @@ export const dictionaries = {
       heading: 'Collaborations that grow products and teams.',
       items: [
         {
-          role: 'Senior Frontend Developer',
-          company: 'Studio Nova',
-          timeframe: '2023 – 2024',
+          role: 'Intern',
+          company: 'Halkbank',
+          timeframe: 'Sep 2025 – Oct 2025',
+          location: 'Istanbul, Türkiye · On-site',
           description:
-            'Partnered with product squads to ship modular design systems and high-performance UIs.',
+            'Built ETL workflows to migrate data from COBOL-based legacy systems to MSSQL and delivered hardware-interactive Android features that improved field efficiency.',
           achievements: [
-            'Doubled component reuse within the SaaS design system.',
-            'Boosted conversion by 18% using GSAP & WebGL powered micro interactions.',
+            'Enabled reliable Bluetooth communication with portable peripherals such as mobile printers.',
+            'Implemented real-time QR code scanning and processing using native Camera APIs.',
           ],
-          technologies: ['React', 'TypeScript', 'Tailwind', 'GSAP'],
+          technologies: ['COBOL', 'SQL', 'Android'],
+          logo: halkbankLogo,
         },
         {
-          role: 'Frontend Consultant',
-          company: 'Atlas Tech',
-          timeframe: '2021 – 2023',
+          role: 'IT Specialist | Frontend Developer',
+          company: 'Divizyon',
+          timeframe: 'Oct 2024 – Sep 2025',
+          location: 'Türkiye · On-site',
           description:
-            'Owned the delivery of enterprise dashboards and customer portal projects end-to-end.',
+            'Handled IT support and system administration while modernising the company\'s web applications with scalable frontend solutions.',
           achievements: [
-            'Added Figma token automation to reduce design hand-off time by 30%.',
-            'Introduced visual regression testing into the CI pipeline to cut production bugs.',
+            'Introduced reusable UI kits and component libraries that accelerated delivery for product squads.',
+            'Optimised PostgreSQL-backed workflows to digitalise key business processes.',
           ],
-          technologies: ['React', 'Styled Components', 'Storybook', 'Jest'],
+          technologies: ['UI Design', 'PostgreSQL', 'React'],
+          logo: divizyonLogo,
         },
         {
-          role: 'Frontend Developer',
-          company: 'Freelance',
-          timeframe: '2018 – 2021',
+          role: 'Volunteer',
+          company: 'Inspire Foundation (Malta)',
+          timeframe: 'Dec 2023 – Sep 2024',
+          location: 'Malta · On-site',
           description:
-            'Delivered landing pages, dashboards, and interactive experiences for start-ups and agencies.',
+            'Supported inclusive educational and therapeutic programmes for people with disabilities, strengthening cross-cultural communication and teamwork skills.',
           achievements: [
-            'Launched 10+ brand sites in under two weeks each.',
-            'Raised Lighthouse & SEO scores above 90 on average.',
+            'Amplified programme impact through one-to-one support and group workshops.',
+            'Helped design engaging learning materials tailored to participant needs.',
           ],
-          technologies: ['Next.js', 'Framer Motion', 'SCSS', 'Netlify'],
+          technologies: ['Adaptable', 'English'],
+          logo: inspireLogo,
         },
       ],
     },
@@ -315,6 +332,8 @@ export const dictionaries = {
         'Share your ideas or project details and we can schedule a quick chat about the next steps.',
       emailLabel: 'Email',
       emailValue: 'hello@furkan.dev',
+      phoneLabel: 'Phone',
+      phoneValue: '+90 542 413 9180',
       cta: 'Send a Message',
     },
     footer: {
