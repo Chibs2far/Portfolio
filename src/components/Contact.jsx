@@ -1,0 +1,42 @@
+import { useLanguage } from '../i18n/LanguageContext.jsx'
+
+export default function Contact() {
+  const { t } = useLanguage()
+  const contact = t('contact')
+
+  return (
+    <section
+      id="contact"
+      className="rounded-3xl border border-violet-500/20 bg-slate-900/40 p-10"
+    >
+      <div className="space-y-4">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-300/70">
+          {contact?.sectionLabel}
+        </p>
+        <h2 className="text-3xl font-semibold text-slate-100">
+          {contact?.heading}
+        </h2>
+        <p className="max-w-2xl text-sm text-slate-200/80">
+          {contact?.body}
+        </p>
+      </div>
+      <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="space-y-2 text-sm text-slate-200">
+          <p className="font-semibold text-slate-100">{contact?.emailLabel}</p>
+          <a
+            href={`mailto:${contact?.emailValue}`}
+            className="text-violet-300 transition hover:text-violet-200"
+          >
+            {contact?.emailValue}
+          </a>
+        </div>
+        <a
+          href={`mailto:${contact?.emailValue}`}
+          className="inline-flex items-center justify-center rounded-full border border-violet-400/70 px-6 py-3 text-sm font-semibold text-violet-300 transition hover:border-violet-300 hover:text-violet-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300"
+        >
+          {contact?.cta}
+        </a>
+      </div>
+    </section>
+  )
+}
