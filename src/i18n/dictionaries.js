@@ -19,16 +19,30 @@ export const dictionaries = {
       ],
     },
     hero: {
-      badge: 'Frontend Developer',
+      badge: 'Software Developer',
       lines: [
         'Merhaba, ben Furkan.',
-        'Etkileşimli deneyimler tasarlıyorum.',
-        'React, Tailwind ve GSAP ile.',
+        'Statik fikirlere,',
+        'Dinamik bir enerji katıyorum.',
       ],
       description:
-        'Modern web teknolojileriyle kullanıcı odaklı arayüzler yaratmayı seviyorum. Aşağıya kaydırarak yaklaşımımı ve örnek projelerimi inceleyebilirsin.',
+        'Teknolojiyi bir araç olarak kullanarak fikirlere nasıl hayat verdiğimi görmek için  aşağı kaydırıp projelerimi inceleyebilirsiniz.',
       primaryCta: 'Projelere göz at',
       secondaryCta: 'İletişime geç',
+      cards: [
+        {
+          title: 'Etkileşimli',
+          description: 'GSAP destekli mikro etkileşimlerle kullanıcıyı içine çeken deneyimler tasarlıyorum.',
+        },
+        {
+          title: 'Performanslı',
+          description: 'React projelerini 60fps hedefiyle optimize ederek akıcı bir deneyim sunuyorum.',
+        },
+        {
+          title: 'Duyarlı',
+          description: 'Tailwind ile her ekran boyutuna hızla uyum sağlayan arayüzler geliştiriyorum.',
+        },
+      ],
     },
     about: {
       sectionLabel: 'Hakkımda',
@@ -37,7 +51,7 @@ export const dictionaries = {
         'Kullanıcı davranışlarını anlayarak, markaların dijitalde fark yaratmasına yardımcı olacak arayüzler tasarlıyorum. Tasarım sistemleri oluşturma, komponent kütüphaneleri hazırlama ve animasyonlu deneyimler üretme konularında çalışıyorum.',
       profileCard: {
         name: 'Furkan Düzköprü',
-        title: 'Frontend Developer',
+        title: 'Software Developer',
         handle: 'furkandüzköprü',
         status: 'Freelance projelere açık',
         contactText: 'İletişime geç',
@@ -52,42 +66,45 @@ export const dictionaries = {
           role: 'Intern',
           company: 'Halkbank',
           timeframe: 'Sep 2025 – Oct 2025',
-          location: 'İstanbul, Türkiye · On-site',
+          location: 'İstanbul, TÜRKİYE · On-site',
           description:
-            'COBOL tabanlı legacy sistemlerden modern MSSQL veritabanlarına veri migrasyonu için ETL süreçleri geliştirdim. Sahadaki operasyonların verimliliğini artırmak adına Android platformunda donanım etkileşimli özellikler tasarladım ve uyguladım.',
+            'COBOL tabanlı legacy sistemlerden modern MSSQL veritabanlarına veri taşıyan ETL süreçleri geliştirirken, sahadaki operasyonları hızlandırmak için Android tabanlı çözümler tasarladım.',
           achievements: [
-            'Taşınabilir yazıcılar gibi çevresel cihazlarla Bluetooth üzerinden kablosuz iletişimi mümkün kılan modüller geliştirdim.',
-            'Yerel kamera API\'leri ile gerçek zamanlı QR kod tarama ve işleme işlevlerini hayata geçirdim.',
+            'T-SQL betikleriyle COBOL tabanlı legacy sistemlerden modern MSSQL veritabanlarına veri taşıyan ETL süreçleri geliştirdim.',
+            'Saha operasyonlarının verimliliğini artırmak için Android platformunda donanım etkileşimli özellikler tasarladım ve devreye aldım.',
+            'Taşınabilir yazıcılar gibi çevresel cihazlarla Bluetooth üzerinden kablosuz iletişimi sağlayan modüller üzerinde çalıştım.',
+            'Yerel Kamera API\'lerini kullanarak gerçek zamanlı QR kod tarama ve işleme işlevlerini uyguladım.',
           ],
-          technologies: ['COBOL', 'SQL', 'Android'],
+          technologies: ['COBOL', 'T-SQL', 'Android'],
           logo: halkbankLogo,
         },
         {
-          role: 'IT Specialist | Frontend Developer',
+          role: 'IT Specialist',
           company: 'Divizyon',
           timeframe: 'Oct 2024 – Sep 2025',
-          location: 'Türkiye · On-site',
+          location: 'KONYA, TÜRKİYE · On-site',
           description:
-            'Donanım ve ağ altyapısının sorunsuz çalışması için IT desteği ve sistem yönetimi sağladım. Modern web teknolojileri kullanarak şirketin web uygulamalarının frontend taraflarını geliştirdim ve bakımını yürüttüm.',
+            'Donanım ve ağ altyapısına yönelik IT operasyonlarını yönetirken, şirketin web uygulamalarının frontend katmanını modern araçlarla geliştirdim ve sürdürdüm.',
           achievements: [
-            'Kullanıcı arayüzü tasarımları ve bileşen kütüphaneleri oluşturarak ekiplerin geliştirme hızını yükselttim.',
-            'PostgreSQL tabanlı veri yapıları üzerinde çalışarak iş süreçlerini dijitalleştirdim.',
+            'Şirketin donanım ve ağ altyapısı için IT desteği ve sistem yönetimi sağladım.',
+            'Modern web teknolojileriyle şirketin web uygulamalarının frontend bölümlerini geliştirdim ve sürdürdüm.',
+            'IT kaynaklarının kesintisiz çalışmasını garanti etmek için son kullanıcılara destek sundum.',
           ],
-          technologies: ['UI Design', 'PostgreSQL', 'React'],
+          technologies: ['React', 'IT Support', 'Networking'],
           logo: divizyonLogo,
         },
         {
           role: 'Volunteer',
           company: 'Inspire Foundation (Malta)',
           timeframe: 'Dec 2023 – Sep 2024',
-          location: 'Malta · On-site',
+          location: 'Żejtun, MALTA · On-site',
           description:
-            'Inspire Malta\'da gönüllü olarak engelli bireyler için eğitimsel ve terapötik programları destekledim. Çeşitlilik içeren multidisipliner ortamda kültürler arası iletişim, takım çalışması ve problem çözme becerileri geliştirdim.',
+            'Inspire Malta\'da gönüllü olarak kapsayıcı eğitim ve terapi programlarını desteklerken, multidisipliner ekiplerle işbirliği becerilerimi geliştirdim.',
           achievements: [
-            'Birebir destek ve grup etkinlikleri ile terapötik programların etkisini artırdım.',
-            'Katılımcılar için özelleştirilmiş öğrenme materyalleri ve aktiviteler hazırladım.',
+            'Inspire Malta\'da gönüllü olarak çalıştım; engelli bireyler için eğitimsel ve terapötik programları destekledim.',
+            'Çok kültürlü ve multidisipliner bir ortamda çalışırken kültürler arası iletişim, takım çalışması ve problem çözme becerileri geliştirdim.',
           ],
-          technologies: ['Adaptasyon', 'İngilizce'],
+          technologies: ['Gönüllülük', 'Takım Çalışması', 'Eğitim'],
           logo: inspireLogo,
         },
       ],
@@ -186,16 +203,30 @@ export const dictionaries = {
       ],
     },
     hero: {
-      badge: 'Frontend Developer',
+      badge: 'Software Developer',
       lines: [
         "Hi, I'm Furkan.",
-        'I craft interactive experiences.',
-        'With React, Tailwind and GSAP.',
+        'I infuse static ideas.',
+        'with dynamic energy.',
       ],
       description:
-        'I love designing user-focused interfaces using modern web technologies. Scroll down to explore my approach and sample projects.',
+        'Scroll down and explore my projects to see how I use technology as a tool to bring ideas to life.',
       primaryCta: 'View projects',
       secondaryCta: 'Contact me',
+      cards: [
+        {
+          title: 'Interactive',
+          description: 'I craft GSAP-powered micro-interactions that pull users into the experience.',
+        },
+        {
+          title: 'Performant',
+          description: 'I tune React builds for 60fps targets to deliver consistently fluid journeys.',
+        },
+        {
+          title: 'Responsive',
+          description: 'I ship Tailwind-driven interfaces that adapt elegantly to every screen.',
+        },
+      ],
     },
     about: {
       sectionLabel: 'About',
@@ -204,7 +235,7 @@ export const dictionaries = {
         'By understanding user behaviour, I craft interfaces that help brands stand out digitally. I focus on design systems, component libraries, and animation-rich experiences.',
       profileCard: {
         name: 'Furkan Duzkopru',
-        title: 'Frontend Developer',
+        title: 'Software Developer',
         handle: 'furkanduzkopru',
         status: 'Open for freelance work',
         contactText: 'Contact',
@@ -221,26 +252,29 @@ export const dictionaries = {
           timeframe: 'Sep 2025 – Oct 2025',
           location: 'Istanbul, Türkiye · On-site',
           description:
-            'Built ETL workflows to migrate data from COBOL-based legacy systems to MSSQL and delivered hardware-interactive Android features that improved field efficiency.',
+            'Built data migration ETL workflows and field-ready Android solutions that bridged COBOL-based legacy systems with modern MSSQL platforms.',
           achievements: [
-            'Enabled reliable Bluetooth communication with portable peripherals such as mobile printers.',
-            'Implemented real-time QR code scanning and processing using native Camera APIs.',
+            'Developed ETL processes to migrate data from COBOL-based legacy systems to modern MSSQL databases using T-SQL scripts.',
+            'Designed and implemented hardware-interactive features on the Android platform to enhance the efficiency of field operations.',
+            'Worked on modules that enabled wireless communication with peripheral devices, such as portable printers, via Bluetooth.',
+            'Implemented real-time QR code scanning and processing functionalities using native Camera APIs.',
           ],
-          technologies: ['COBOL', 'SQL', 'Android'],
+          technologies: ['COBOL', 'T-SQL', 'Android'],
           logo: halkbankLogo,
         },
         {
-          role: 'IT Specialist | Frontend Developer',
+          role: 'IT Specialist',
           company: 'Divizyon',
           timeframe: 'Oct 2024 – Sep 2025',
           location: 'Türkiye · On-site',
           description:
-            'Handled IT support and system administration while modernising the company\'s web applications with scalable frontend solutions.',
+            'Balanced day-to-day IT operations with frontend development, keeping infrastructure stable while evolving the company\'s web applications.',
           achievements: [
-            'Introduced reusable UI kits and component libraries that accelerated delivery for product squads.',
-            'Optimised PostgreSQL-backed workflows to digitalise key business processes.',
+            'Providing IT support and system administration for the company\'s hardware and network infrastructure.',
+            'Developing and maintaining the frontend parts of the company\'s web applications using modern web technologies.',
+            'Delivering end-user support to ensure the smooth operation of IT resources.',
           ],
-          technologies: ['UI Design', 'PostgreSQL', 'React'],
+          technologies: ['React', 'IT Support', 'Networking'],
           logo: divizyonLogo,
         },
         {
@@ -249,12 +283,12 @@ export const dictionaries = {
           timeframe: 'Dec 2023 – Sep 2024',
           location: 'Malta · On-site',
           description:
-            'Supported inclusive educational and therapeutic programmes for people with disabilities, strengthening cross-cultural communication and teamwork skills.',
+            'Volunteered with Inspire Malta to support inclusive education and therapy programmes while collaborating across multidisciplinary teams.',
           achievements: [
-            'Amplified programme impact through one-to-one support and group workshops.',
-            'Helped design engaging learning materials tailored to participant needs.',
+            'Contributed as a volunteer at Inspire Malta, supporting educational and therapeutic programs for individuals with disabilities.',
+            'Developed cross-cultural communication, teamwork, and problem-solving skills while working in a diverse, multidisciplinary environment.',
           ],
-          technologies: ['Adaptable', 'English'],
+          technologies: ['Volunteering', 'Teamwork', 'Education'],
           logo: inspireLogo,
         },
       ],

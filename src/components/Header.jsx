@@ -11,6 +11,8 @@ export default function Header() {
   const [isSolid, setIsSolid] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const headerRef = useRef(null)
+  const mobileMenuRef = useRef(null)
+  const toggleButtonRef = useRef(null)
   const { t, lang, setLanguage } = useLanguage()
   const navItemsSource = t('header.nav')
   const navItems = Array.isArray(navItemsSource) ? navItemsSource : []
@@ -56,16 +58,6 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
-    if (!isMenuOpen || typeof document === 'undefined') return
-    const { body } = document
-    const previousOverflow = body.style.overflow
-    body.style.overflow = 'hidden'
-    return () => {
-      body.style.overflow = previousOverflow
-    }
-  }, [isMenuOpen])
-
-  useEffect(() => {
     if (typeof window === 'undefined') return undefined
     const mediaQuery = window.matchMedia('(min-width: 640px)')
     const handleMediaChange = (event) => {
@@ -93,6 +85,27 @@ export default function Header() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isMenuOpen])
+
+  useEffect(() => {
+    if (!isMenuOpen || typeof document === 'undefined') return undefined
+
+    const handleOutsideInteraction = (event) => {
+      const menuElement = mobileMenuRef.current
+      const toggleElement = toggleButtonRef.current
+      if (!menuElement) return
+      const target = event.target
+      if (!(target instanceof Node)) return
+
+      const isToggle = toggleElement?.contains(target)
+      const isInsideMenu = menuElement.contains(target)
+      if (isToggle || isInsideMenu) return
+
+      setIsMenuOpen(false)
+    }
+
+    document.addEventListener('click', handleOutsideInteraction)
+    return () => document.removeEventListener('click', handleOutsideInteraction)
   }, [isMenuOpen])
 
   // --- 1. Kilit Nokta (Pozisyon) ---
@@ -183,6 +196,7 @@ export default function Header() {
             aria-label={isMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu-panel"
+            ref={toggleButtonRef}
             className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-violet-500/40 bg-slate-950/70 text-violet-200 shadow-[0_12px_30px_rgba(139,92,246,0.25)] transition hover:text-violet-100 sm:hidden"
           >
             <span className="relative block h-4 w-5">
@@ -210,6 +224,7 @@ export default function Header() {
       <div
         id="mobile-menu-panel"
         aria-hidden={!isMenuOpen}
+        ref={mobileMenuRef}
         className={`sm:hidden absolute top-full left-0 right-0 z-30 overflow-hidden transition-all duration-300 ease-out ${
           isMenuOpen ? 'max-h-[85vh] pointer-events-auto' : 'max-h-0 pointer-events-none'
         }`}

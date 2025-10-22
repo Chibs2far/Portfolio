@@ -3,10 +3,32 @@ import { gsap } from 'gsap'
 import CardSwap, { Card } from './CardSwap'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
+const heroCardVisuals = [
+  {
+    border: 'border-violet-500/20',
+    accentText: 'text-violet-100/90',
+    gradientBottom: 'from-violet-500/40 via-fuchsia-500/30 to-transparent',
+    gradientOrb: 'bg-violet-500/20',
+  },
+  {
+    border: 'border-fuchsia-500/20',
+    accentText: 'text-fuchsia-100/90',
+    gradientBottom: 'from-fuchsia-500/35 via-purple-500/20 to-transparent',
+    gradientOrb: 'bg-fuchsia-500/20',
+  },
+  {
+    border: 'border-sky-400/25',
+    accentText: 'text-sky-100/90',
+    gradientBottom: 'from-sky-400/35 via-cyan-400/20 to-transparent',
+    gradientOrb: 'bg-sky-400/20',
+  },
+]
+
 export default function Hero() {
   const { t } = useLanguage()
   const heroContent = t('hero')
   const heroLines = heroContent?.lines ?? []
+  const heroCards = heroContent?.cards ?? []
   const heroRef = useRef(null)
 
   useEffect(() => {
@@ -96,60 +118,35 @@ export default function Hero() {
             pauseOnHover={false}
             containerClassName="absolute right-0 top-0 translate-x-[12%] translate-y-[22%] origin-top-right perspective-[1200px] overflow-visible xl:translate-x-[10%] xl:translate-y-[36%]"
           >
-            <Card customClass="bg-slate-950/90 text-slate-100">
-              <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl">
-                <div className="relative z-20 flex items-center gap-3 border-b border-violet-500/20 bg-slate-950/70 px-6 py-4 backdrop-blur">
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-violet-100/90">
-                    Etkileşimli
-                  </p>
-                </div>
-                <div className="relative z-20 flex flex-1 flex-col justify-center px-6">
-                  <p className="text-sm text-slate-200/80">
-                    GSAP destekli mikro etkileşimlerle kullanıcıyı içine çeken deneyimler tasarlıyorum.
-                  </p>
-                </div>
-                <div className="absolute inset-0">
-                  <span className="absolute inset-x-[-20%] bottom-[-20%] h-[220px] rounded-full bg-gradient-to-r from-violet-500/40 via-fuchsia-500/30 to-transparent blur-3xl" />
-                  <span className="absolute left-1/2 top-[35%] h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-violet-500/20 blur-2xl" />
-                </div>
-              </div>
-            </Card>
-            <Card customClass="bg-slate-950/90 text-slate-100">
-              <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl">
-                <div className="relative z-20 flex items-center gap-3 border-b border-fuchsia-500/20 bg-slate-950/70 px-6 py-4 backdrop-blur">
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-fuchsia-100/90">
-                    Performanslı
-                  </p>
-                </div>
-                <div className="relative z-20 flex flex-1 flex-col justify-center px-6">
-                  <p className="text-sm text-slate-200/80">
-                    React projelerini 60fps hedefiyle optimize ederek akıcı bir deneyim sunuyorum.
-                  </p>
-                </div>
-                <div className="absolute inset-0">
-                  <span className="absolute inset-x-[-20%] bottom-[-20%] h-[220px] rounded-full bg-gradient-to-r from-fuchsia-500/35 via-purple-500/20 to-transparent blur-3xl" />
-                  <span className="absolute left-1/2 top-[35%] h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-2xl" />
-                </div>
-              </div>
-            </Card>
-            <Card customClass="bg-slate-950/90 text-slate-100">
-              <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl">
-                <div className="relative z-20 flex items-center gap-3 border-b border-sky-400/25 bg-slate-950/70 px-6 py-4 backdrop-blur">
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-sky-100/90">
-                    Duyarlı
-                  </p>
-                </div>
-                <div className="relative z-20 flex flex-1 flex-col justify-center px-6">
-                  <p className="text-sm text-slate-200/80">
-                    Tailwind ile her ekran boyutuna hızla uyum sağlayan arayüzler geliştiriyorum.
-                  </p>
-                </div>
-                <div className="absolute inset-0">
-                  <span className="absolute inset-x-[-20%] bottom-[-20%] h-[220px] rounded-full bg-gradient-to-r from-sky-400/35 via-cyan-400/20 to-transparent blur-3xl" />
-                  <span className="absolute left-1/2 top-[35%] h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-sky-400/20 blur-2xl" />
-                </div>
-              </div>
-            </Card>
+            {heroCards.map(({ title, description }, index) => {
+              const visuals = heroCardVisuals[index % heroCardVisuals.length]
+              return (
+                <Card key={`${title}-${index}`} customClass="bg-slate-950/90 text-slate-100">
+                  <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl">
+                    <div
+                      className={`relative z-20 flex items-center gap-3 border-b ${visuals.border} bg-slate-950/70 px-6 py-4 backdrop-blur`}
+                    >
+                      <p
+                        className={`text-sm font-medium uppercase tracking-[0.2em] ${visuals.accentText}`}
+                      >
+                        {title}
+                      </p>
+                    </div>
+                    <div className="relative z-20 flex flex-1 flex-col justify-center px-6">
+                      <p className="text-sm text-slate-200/80">{description}</p>
+                    </div>
+                    <div className="absolute inset-0">
+                      <span
+                        className={`absolute inset-x-[-20%] bottom-[-20%] h-[220px] rounded-full bg-gradient-to-r ${visuals.gradientBottom} blur-3xl`}
+                      />
+                      <span
+                        className={`absolute left-1/2 top-[35%] h-[220px] w-[220px] -translate-x-1/2 rounded-full ${visuals.gradientOrb} blur-2xl`}
+                      />
+                    </div>
+                  </div>
+                </Card>
+              )
+            })}
           </CardSwap>
         </div>
       </div>
