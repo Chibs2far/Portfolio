@@ -94,7 +94,7 @@ export default function Hero() {
             verticalDistance={46}
             delay={5200}
             pauseOnHover={false}
-            containerClassName="absolute right-0 top-0 translate-x-[12%] translate-y-[22%] origin-top-right perspective-[1200px] overflow-visible xl:translate-x-[60%] xl:translate-y-[44%]"
+            containerClassName="absolute right-0 top-0 translate-x-[12%] translate-y-[22%] origin-top-right perspective-[1200px] overflow-visible xl:translate-x-[10%] xl:translate-y-[36%]"
           >
             <Card customClass="bg-slate-950/90 text-slate-100">
               <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl">

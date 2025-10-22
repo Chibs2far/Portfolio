@@ -16,7 +16,7 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-slate-950/70 to-slate-950" />
         </div>
         <Header />
-        <div className="mx-auto max-w-7xl px-6 pt-32 lg:px-8 xl:px-10">
+        <div className="mx-auto max-w-7xl translate-x-[-2%] px-6 pt-32 lg:px-8 xl:px-10">
           <Hero />
         </div>
       </div>
