@@ -231,11 +231,12 @@
 
 .pc-avatar-content .avatar {
   display: block;
-  width: 100%;
+  width: min(100%, 420px);
+  max-width: 92%;
   height: auto;
   position: absolute;
   left: 50%;
-  bottom: -72px;
+  bottom: -56px;
   transform: translate3d(-50%, 0, 0) !important;
   opacity: 1;
   transition: none;
@@ -431,6 +432,11 @@
     max-height: 450px;
   }
 
+  .pc-avatar-content .avatar {
+    max-width: 86%;
+    bottom: -24px;
+  }
+
   .pc-details {
     top: 2em;
     gap: 0.4rem;
@@ -480,6 +486,11 @@
     max-height: 380px;
   }
 
+  .pc-avatar-content .avatar {
+    max-width: 84%;
+    bottom: -4px;
+  }
+
   .pc-details {
     top: 1.5em;
     gap: 0.35rem;
@@ -526,10 +537,22 @@
   }
 }
 
+@media (max-width: 414px) {
+  .pc-avatar-content .avatar {
+    max-width: 82%;
+    bottom: 0;
+  }
+}
+
 @media (max-width: 320px) {
   .pc-card {
     height: 55svh;
     max-height: 320px;
+  }
+
+  .pc-avatar-content .avatar {
+    max-width: 80%;
+    bottom: 0;
   }
 
   .pc-details h3 {

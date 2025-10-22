@@ -36,7 +36,7 @@ export const dictionaries = {
         },
         {
           title: 'VERİMLİ',
-          description: 'Her bir bilginin sistemde tek bir otoriter temsili olmalıdır.',
+          description: 'Bir bilgiyi iki kez yazmak, bir hatayı iki kez düzeltmek demektir.',
         },
         {
           title: 'OKUNABİLİR',
