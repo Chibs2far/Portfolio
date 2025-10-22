@@ -31,16 +31,16 @@ export const dictionaries = {
       secondaryCta: 'İletişime geç',
       cards: [
         {
-          title: 'Etkileşimli',
-          description: 'GSAP destekli mikro etkileşimlerle kullanıcıyı içine çeken deneyimler tasarlıyorum.',
+          title: 'BASİT',
+          description: 'Yazılımın zekâsı, en karmaşık problemi bile en basit ve anlaşılır şekilde çözebilmektir.',
         },
         {
-          title: 'Performanslı',
-          description: 'React projelerini 60fps hedefiyle optimize ederek akıcı bir deneyim sunuyorum.',
+          title: 'VERİMLİ',
+          description: 'Her bir bilginin sistemde tek bir otoriter temsili olmalıdır.',
         },
         {
-          title: 'Duyarlı',
-          description: 'Tailwind ile her ekran boyutuna hızla uyum sağlayan arayüzler geliştiriyorum.',
+          title: 'OKUNABİLİR',
+          description: 'Kod, yazılmasından çok daha fazla okunur.',
         },
       ],
     },
@@ -215,16 +215,16 @@ export const dictionaries = {
       secondaryCta: 'Contact me',
       cards: [
         {
-          title: 'Interactive',
-          description: 'I craft GSAP-powered micro-interactions that pull users into the experience.',
+          title: 'SIMPLE',
+          description: 'Smart software solves the most complex problems in the simplest, clearest way.',
         },
         {
-          title: 'Performant',
-          description: 'I tune React builds for 60fps targets to deliver consistently fluid journeys.',
+          title: 'EFFICIENT',
+          description: 'Every piece of information should have a single authoritative representation in the system.',
         },
         {
-          title: 'Responsive',
-          description: 'I ship Tailwind-driven interfaces that adapt elegantly to every screen.',
+          title: 'READABLE',
+          description: 'Code is read far more often than it is written.',
         },
       ],
     },
