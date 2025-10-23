@@ -62,18 +62,28 @@ export default function ProjectModal({ project, labels, onClose }) {
 
   const modalContent = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-lg px-4 py-10 sm:py-12"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-lg px-3 py-8 sm:px-4 sm:py-10"
       role="presentation"
       onClick={handleBackdropClick}
     >
       <div
-        className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-slate-700/60 bg-slate-900/95 shadow-2xl shadow-slate-950/60"
+        className="relative flex max-h-[calc(100vh-3rem)] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/95 shadow-2xl shadow-slate-950/60 sm:rounded-3xl lg:max-w-4xl"
         role="dialog"
         aria-modal="true"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex flex-col gap-0">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-800/40">
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute right-4 top-4 z-20 inline-flex size-10 items-center justify-center rounded-full border border-slate-600/70 bg-slate-800/80 text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 sm:right-5 sm:top-5"
+          aria-label={labels?.closeLabel ?? 'Close'}
+        >
+          <span aria-hidden="true" className="text-lg leading-none">
+            ×
+          </span>
+        </button>
+        <div className="flex flex-col">
+          <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-800/40 sm:aspect-[16/9]">
             {images.length ? (
               <>
                 <img
@@ -119,7 +129,7 @@ export default function ProjectModal({ project, labels, onClose }) {
               </div>
             )}
           </div>
-          <div className="flex flex-col gap-6 border-t border-slate-800/70 bg-slate-900/95 p-6 lg:p-8">
+          <div className="flex flex-1 flex-col gap-6 overflow-y-auto border-t border-slate-800/70 bg-slate-900/95 p-6 sm:p-7 lg:p-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-semibold text-slate-100">{project.title}</h3>
               <p className="text-sm text-slate-300">{project.longDescription ?? project.description}</p>
@@ -154,13 +164,13 @@ export default function ProjectModal({ project, labels, onClose }) {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-end gap-3">
+            <div className="flex flex-col items-stretch justify-end gap-3 sm:flex-row sm:items-center sm:justify-between lg:justify-end">
               {hasLink ? (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-violet-400/60 px-4 py-2 text-sm font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-400/60 px-4 py-2 text-sm font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
                 >
                   {labels?.primaryActionButton ?? 'View Project'}
                 </a>
@@ -168,7 +178,7 @@ export default function ProjectModal({ project, labels, onClose }) {
                 <button
                   type="button"
                   disabled
-                  className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-slate-700/60 px-4 py-2 text-sm font-semibold text-slate-500 opacity-60"
+                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-slate-700/60 px-4 py-2 text-sm font-semibold text-slate-500 opacity-60"
                 >
                   {labels?.comingSoonLabel ?? 'Coming soon'}
                 </button>
@@ -176,7 +186,7 @@ export default function ProjectModal({ project, labels, onClose }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
               >
                 {labels?.closeLabel ?? 'Close'}
               </button>
