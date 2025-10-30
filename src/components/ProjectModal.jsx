@@ -62,12 +62,12 @@ export default function ProjectModal({ project, labels, onClose }) {
 
   const modalContent = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-lg px-3 py-8 sm:px-4 sm:py-10"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-lg px-2.5 py-3 sm:px-4 sm:py-5 md:px-6"
       role="presentation"
       onClick={handleBackdropClick}
     >
       <div
-        className="relative flex max-h-[calc(100vh-3rem)] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/95 shadow-2xl shadow-slate-950/60 sm:rounded-3xl lg:max-w-4xl"
+        className="relative flex w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/95 shadow-2xl shadow-slate-950/60 max-h-[calc(100vh-1.5rem)] sm:max-w-xl sm:rounded-3xl sm:max-h-[calc(100vh-2rem)] md:max-w-2xl md:max-h-[calc(100vh-2.5rem)] lg:max-w-3xl lg:max-h-[calc(100vh-3rem)]"
         role="dialog"
         aria-modal="true"
         onClick={(event) => event.stopPropagation()}
@@ -83,7 +83,7 @@ export default function ProjectModal({ project, labels, onClose }) {
           </span>
         </button>
         <div className="flex flex-col">
-          <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-800/40 sm:aspect-[16/9]">
+          <div className="relative w-full overflow-hidden bg-slate-800/40 h-[120px] sm:h-[180px] md:h-[230px] lg:h-[280px]">
             {images.length ? (
               <>
                 <img
@@ -129,34 +129,36 @@ export default function ProjectModal({ project, labels, onClose }) {
               </div>
             )}
           </div>
-          <div className="flex flex-1 flex-col gap-6 overflow-y-auto border-t border-slate-800/70 bg-slate-900/95 p-6 sm:p-7 lg:p-8">
-            <div className="space-y-2">
-              <h3 className="text-2xl font-semibold text-slate-100">{project.title}</h3>
-              <p className="text-sm text-slate-300">{project.longDescription ?? project.description}</p>
+          <div className="flex flex-1 flex-col gap-3 border-t border-slate-800/70 bg-slate-900/95 p-3.5 sm:p-4 md:p-6 lg:p-6">
+            <div className="space-y-1.5">
+              <h3 className="text-lg font-semibold text-slate-100 sm:text-[22px]">{project.title}</h3>
+              <p className="text-[13px] leading-snug text-slate-300 sm:text-sm sm:leading-relaxed">
+                {project.longDescription ?? project.description}
+              </p>
             </div>
-            <div className="space-y-6">
-              <div className="space-y-3">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-300/70">
+            <div className="space-y-3">
+              <div className="space-y-1.5">
+                <h4 className="text-[11px] font-semibold uppercase tracking-[0.26em] text-violet-300/70 sm:text-xs sm:tracking-[0.24em] md:text-sm">
                   {labels?.featuresTitle}
                 </h4>
-                <ul className="space-y-2 text-sm text-slate-300">
+                <ul className="grid grid-cols-1 gap-x-3 gap-y-1.5 text-[13px] leading-snug text-slate-300 sm:grid-cols-2 sm:text-sm sm:leading-relaxed">
                   {project.features?.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 inline-flex size-1.5 rounded-full bg-violet-400" />
+                      <span className="mt-1 inline-flex size-1 rounded-full bg-violet-400 sm:size-1.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="space-y-3">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-300/70">
+              <div className="space-y-1.5">
+                <h4 className="text-[11px] font-semibold uppercase tracking-[0.26em] text-violet-300/70 sm:text-xs sm:tracking-[0.24em] md:text-sm">
                   {labels?.technologiesTitle}
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies?.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-violet-500/20 px-3 py-1 text-xs font-medium text-violet-200"
+                      className="rounded-full bg-violet-500/20 px-2.5 py-1 text-[11px] font-medium text-violet-200 sm:px-3 sm:text-xs"
                     >
                       {tech}
                     </span>
@@ -164,13 +166,13 @@ export default function ProjectModal({ project, labels, onClose }) {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch justify-end gap-3 sm:flex-row sm:items-center sm:justify-between lg:justify-end">
+            <div className="flex flex-col items-stretch justify-end gap-2 sm:flex-row sm:items-center sm:justify-between lg:justify-end">
               {hasLink ? (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-400/60 px-4 py-2 text-sm font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-400/60 px-3.5 py-1.5 text-[13px] font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 sm:px-4 sm:py-2 sm:text-sm"
                 >
                   {labels?.primaryActionButton ?? 'View Project'}
                 </a>
@@ -178,7 +180,7 @@ export default function ProjectModal({ project, labels, onClose }) {
                 <button
                   type="button"
                   disabled
-                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-slate-700/60 px-4 py-2 text-sm font-semibold text-slate-500 opacity-60"
+                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-slate-700/60 px-3.5 py-1.5 text-[13px] font-semibold text-slate-500 opacity-60 sm:px-4 sm:py-2 sm:text-sm"
                 >
                   {labels?.comingSoonLabel ?? 'Coming soon'}
                 </button>
@@ -186,7 +188,7 @@ export default function ProjectModal({ project, labels, onClose }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-800 px-3.5 py-1.5 text-[13px] font-semibold text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 sm:px-4 sm:py-2 sm:text-sm"
               >
                 {labels?.closeLabel ?? 'Close'}
               </button>
