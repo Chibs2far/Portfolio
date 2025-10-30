@@ -72,16 +72,6 @@ export default function ProjectModal({ project, labels, onClose }) {
         aria-modal="true"
         onClick={(event) => event.stopPropagation()}
       >
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute right-4 top-4 z-20 inline-flex size-10 items-center justify-center rounded-full border border-slate-600/70 bg-slate-800/80 text-slate-200 transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 sm:right-5 sm:top-5"
-          aria-label={labels?.closeLabel ?? 'Close'}
-        >
-          <span aria-hidden="true" className="text-lg leading-none">
-            ×
-          </span>
-        </button>
         <div className="flex flex-col">
           <div className="relative w-full overflow-hidden bg-slate-800/40 h-[120px] sm:h-[180px] md:h-[230px] lg:h-[280px]">
             {images.length ? (

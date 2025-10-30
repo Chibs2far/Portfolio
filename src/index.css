@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-slate-950 text-slate-100 antialiased;
+}
+
+@keyframes section-fade-highlight {
+  0% {
+    opacity: 0.25;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-fade-highlight {
+  animation: section-fade-highlight 0.65s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-fade-highlight {
+    animation: none;
+  }
 }

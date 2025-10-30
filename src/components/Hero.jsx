@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import CardSwap, { Card } from './CardSwap'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
@@ -30,6 +30,7 @@ export default function Hero() {
   const heroLines = heroContent?.lines ?? []
   const heroCards = heroContent?.cards ?? []
   const heroRef = useRef(null)
+  const fadeTimers = useRef({})
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -61,6 +62,41 @@ export default function Hero() {
       ctx.revert()
     }
   }, [])
+
+  useEffect(() => {
+    return () => {
+      Object.values(fadeTimers.current).forEach((timeoutId) => {
+        if (timeoutId) {
+          clearTimeout(timeoutId)
+        }
+      })
+    }
+  }, [])
+
+  const handleSmoothScroll = useCallback(
+    (event, targetId) => {
+      event?.preventDefault()
+      const target = document.querySelector(targetId)
+      if (!target) return
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+
+      target.classList.remove('section-fade-highlight')
+      // force reflow so animation can restart
+      void target.offsetWidth
+      target.classList.add('section-fade-highlight')
+
+      if (fadeTimers.current[targetId]) {
+        clearTimeout(fadeTimers.current[targetId])
+      }
+
+      fadeTimers.current[targetId] = window.setTimeout(() => {
+        target.classList.remove('section-fade-highlight')
+        delete fadeTimers.current[targetId]
+      }, 800)
+    },
+    [],
+  )
 
   return (
     <section
@@ -95,13 +131,15 @@ export default function Hero() {
         <div className="hero-cta flex flex-wrap items-center gap-4">
           <a
             href="#projects"
+            onClick={(event) => handleSmoothScroll(event, '#projects')}
             className="rounded-full bg-violet-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400"
           >
             {heroContent?.primaryCta}
           </a>
           <a
             href="#contact"
-            className="text-sm font-semibold text-violet-200 transition hover:text-violet-100 focus-visible:text-violet-100"
+            onClick={(event) => handleSmoothScroll(event, '#contact')}
+            className="inline-flex items-center gap-2 rounded-full border border-violet-400/60 px-5 py-2.5 text-sm font-semibold text-violet-100 transition hover:border-violet-300 hover:text-violet-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300"
           >
             {heroContent?.secondaryCta}
           </a>

@@ -1,7 +1,13 @@
 import educationDashboardImg from '../assets/images/projects/education-dashboard.jpg'
+import educationDashboardImg2 from '../assets/images/projects/education-dashboard-2.jpg'
+import educationDashboardImg3 from '../assets/images/projects/education-dashboard-3.jpg'
 import profileAvatarImg from '../assets/images/profile-avatar.png'
 import portfolioExperienceImg from '../assets/images/projects/portfolio-experience.jpg'
+import portfolioExperienceImg2 from '../assets/images/projects/portfolio-experience-2.jpg'
+import portfolioExperienceImg3 from '../assets/images/projects/portfolio-experience-3.jpg'
 import microAnimationsImg from '../assets/images/projects/micro-animations.jpg'
+import microAnimationsImg2 from '../assets/images/projects/micro-animations-2.jpg'
+import microAnimationsImg3 from '../assets/images/projects/micro-animations-3.jpg'
 import divizyonLogo from '../assets/images/experiences/divizyon_logo.jpeg'
 import halkbankLogo from '../assets/images/experiences/halkbank_logo.jpeg'
 import inspireLogo from '../assets/images/experiences/inspire_foundation_malta__logo.jpeg'
@@ -128,6 +134,7 @@ export const dictionaries = {
             'Kişisel marka hikayesini görsel etkileşimlerle anlatan landing page. GSAP ile sahne geçişleri ve scroll tabanlı animasyonlar içeriyor.',
           timeframe: '2024',
           stack: ['React', 'GSAP', 'TailwindCSS'],
+          gallery: [portfolioExperienceImg, portfolioExperienceImg2, portfolioExperienceImg3],
           longDescription:
             'Marka hikayesini anlatan tek sayfalık deneyim; animasyonlu sahneler ve kullanıcı etkileşimini takip eden içerik blokları ile destekleniyor.',
           features: [
@@ -145,6 +152,7 @@ export const dictionaries = {
             'Gerçek zamanlı veri görselleştirmeleri ve özelleştirilebilir bileşenlerle tasarlanmış yönetim paneli prototipi.',
           timeframe: '2023',
           stack: ['React', 'Recharts', 'Radix UI'],
+          gallery: [educationDashboardImg, educationDashboardImg2, educationDashboardImg3],
           longDescription:
             'Eğitim yöneticileri için eğitmen, modül ve öğrenci performanslarını tek panelden takip etmeyi kolaylaştıran bir kontrol merkezi.',
           features: [
@@ -162,6 +170,7 @@ export const dictionaries = {
             'Çeşitli mikro etkileşimleri tek çatı altında toplayan yeniden kullanılabilir animasyon paketleri.',
           timeframe: '2022',
           stack: ['React', 'GSAP', 'Storybook'],
+          gallery: [microAnimationsImg, microAnimationsImg2, microAnimationsImg3],
           longDescription:
             'Ürün ekiplerinin hızlıca prototip hazırlayabilmesi için tasarlanmış, yeniden kullanılabilir animasyon koleksiyonu ve Storybook dokümantasyonu.',
           features: [
@@ -312,6 +321,7 @@ export const dictionaries = {
             'A landing page that tells a personal brand story with visual interactions. Features scene transitions and scroll-based animations powered by GSAP.',
           timeframe: '2024',
           stack: ['React', 'GSAP', 'TailwindCSS'],
+          gallery: [portfolioExperienceImg, portfolioExperienceImg2, portfolioExperienceImg3],
           longDescription:
             'A narrative-driven personal portfolio experience with scroll-triggered scenes, parallax layers, and reusable animated components.',
           features: [
@@ -329,6 +339,7 @@ export const dictionaries = {
             'A management dashboard prototype featuring real-time data visualisations and customisable components.',
           timeframe: '2023',
           stack: ['React', 'Recharts', 'Radix UI'],
+          gallery: [educationDashboardImg, educationDashboardImg2, educationDashboardImg3],
           longDescription:
             'A control center for education teams to monitor instructors, modules, and learner performance from a single unified interface.',
           features: [
@@ -346,6 +357,7 @@ export const dictionaries = {
             'Reusable animation packs that consolidate a wide range of micro-interactions in a single place.',
           timeframe: '2022',
           stack: ['React', 'GSAP', 'Storybook'],
+          gallery: [microAnimationsImg, microAnimationsImg2, microAnimationsImg3],
           longDescription:
             'A collection of reusable motion presets to speed up prototyping, packaged with Storybook for live documentation.',
           features: [
