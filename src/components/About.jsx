@@ -15,9 +15,15 @@ export default function About() {
           <h2 className="text-3xl font-semibold text-slate-100">
             {about?.heading}
           </h2>
-          <p className="text-base text-slate-200/80">
-            {about?.body}
-          </p>
+          <div className="space-y-4 text-base text-slate-200/80">
+            {(Array.isArray(about?.body) ? about.body : about?.body ? [about.body] : []).map(
+              (paragraph, index) => (
+                <p key={`about-paragraph-${index}`} className="leading-relaxed">
+                  {paragraph}
+                </p>
+              ),
+            )}
+          </div>
         </div>
         <ProfileCard
           className="mx-auto max-w-[320px] md:max-w-sm lg:ml-auto lg:mr-0 lg:max-w-md xl:max-w-lg"

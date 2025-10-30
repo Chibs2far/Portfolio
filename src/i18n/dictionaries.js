@@ -52,9 +52,13 @@ export const dictionaries = {
     },
     about: {
       sectionLabel: 'Hakkımda',
-      heading: 'Özgün ve yaşayan web deneyimleri oluşturuyorum.',
-      body:
-        'Kullanıcı davranışlarını anlayarak, markaların dijitalde fark yaratmasına yardımcı olacak arayüzler tasarlıyorum. Tasarım sistemleri oluşturma, komponent kütüphaneleri hazırlama ve animasyonlu deneyimler üretme konularında çalışıyorum.',
+      heading: 'Tanışalım.',
+      body: [
+        'Merhaba, ben Furkan. 24 yaşındayım ve Konya Teknik Üniversitesi Bilgisayar Mühendisliği bölümünden mezun oldum.',
+        'Web ve mobil geliştirme alanında React ve React Native kullanarak kullanıcı odaklı projeler geliştiriyorum. Aynı zamanda T-SQL, Kotlin, Swift ve Unity konularında da başlangıç seviyesinde bilgi sahibiyim.',
+        'Sürekli öğrenmeye ve kullanıcıya gerçek değer katan çözümler üretmeye odaklanıyorum. Yeni fırsatlara her zaman açığım. Projelerimi incelemek için lütfen kaydırmaya devam edin.',
+        'Benimle iletişime geçmekten çekinmeyin.',
+      ],
       profileCard: {
         name: 'Furkan Düzköprü',
         title: 'Software Developer',
@@ -190,7 +194,7 @@ export const dictionaries = {
       body:
         'Fikirlerini paylaşmak ya da potansiyel proje detaylarını konuşmak istersen, kısa bir not bırakman yeterli.',
       emailLabel: 'E-posta',
-      emailValue: 'hello@furkan.dev',
+      emailValue: 'furkanduzkopru@gmail.com',
       phoneLabel: 'Telefon',
       phoneValue: '+90 542 413 9180',
       cta: 'Mesaj Gönder',
@@ -239,9 +243,13 @@ export const dictionaries = {
     },
     about: {
       sectionLabel: 'About',
-      heading: 'I build distinctive, living web experiences.',
-      body:
-        'By understanding user behaviour, I craft interfaces that help brands stand out digitally. I focus on design systems, component libraries, and animation-rich experiences.',
+      heading: "Let's connect.",
+      body: [
+        "Hello, I'm Furkan. I am 24 years old and a graduate of Konya Technical University with a degree in Computer Engineering.",
+        'I develop projects in web and mobile development using React and React Native. I also have beginner-level knowledge of T-SQL, Kotlin, Swift, and Unity. I am focused on continuous learning and delivering solutions that create real value for users.',
+        'I am always open to new opportunities. Please feel free to scroll down to see my projects.',
+        'Please feel free to get in touch.',
+      ],
       profileCard: {
         name: 'Furkan Duzkopru',
         title: 'Software Developer',
@@ -377,7 +385,7 @@ export const dictionaries = {
       body:
         'Share your ideas or project details and we can schedule a quick chat about the next steps.',
       emailLabel: 'Email',
-      emailValue: 'hello@furkan.dev',
+      emailValue: 'furkanduzkopru@gmail.com',
       phoneLabel: 'Phone',
       phoneValue: '+90 542 413 9180',
       cta: 'Send a Message',
