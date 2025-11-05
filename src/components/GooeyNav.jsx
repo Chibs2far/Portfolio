@@ -4,6 +4,7 @@ import './GooeyNav.css'
 const defaultItems = [
   { label: 'Home', href: '#top' },
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experiences' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
