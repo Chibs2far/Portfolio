@@ -30,8 +30,12 @@ export default function Projects() {
         {projectsContent?.heading}
       </h2>
       <div className="grid gap-6 lg:grid-cols-3">
-        {cards.map((project) => {
+        {cards.map((project, index) => {
           const cover = project.image
+          const overlayClass =
+            index <= 1
+              ? 'bg-slate-950/80 transition group-hover:bg-slate-950/70'
+              : 'bg-slate-950/55 transition group-hover:bg-slate-950/45'
           return (
             <article
               key={project.title}
@@ -54,7 +58,7 @@ export default function Projects() {
                   loading="lazy"
                 />
               ) : null}
-              <div className="absolute inset-0 bg-slate-950/55 transition group-hover:bg-slate-950/45" />
+              <div className={`absolute inset-0 ${overlayClass}`} />
               <div className="relative z-10 mt-auto flex flex-col gap-4 p-6">
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold text-slate-100 drop-shadow-[0_2px_8px_rgba(15,23,42,0.45)]">

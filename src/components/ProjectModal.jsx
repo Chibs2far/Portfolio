@@ -44,7 +44,13 @@ export default function ProjectModal({ project, labels, onClose }) {
   }
 
   const images = project.gallery?.length ? project.gallery : project.image ? [project.image] : []
-  const hasLink = Boolean(project.link)
+  const featureList = project.features ?? []
+  const splitIndex = Math.ceil(featureList.length / 2)
+  const featureColumns =
+    featureList.length > 3
+      ? [featureList.slice(0, splitIndex), featureList.slice(splitIndex)]
+      : [featureList]
+  const renderedFeatureColumns = featureColumns.filter((column) => column.length > 0)
 
   const showPrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
@@ -73,13 +79,13 @@ export default function ProjectModal({ project, labels, onClose }) {
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex flex-col">
-          <div className="relative w-full overflow-hidden bg-slate-800/40 h-[120px] sm:h-[180px] md:h-[230px] lg:h-[280px]">
+          <div className="relative flex w-full items-center justify-center overflow-hidden bg-slate-900/60 h-[120px] sm:h-[180px] md:h-[230px] lg:h-[280px]">
             {images.length ? (
               <>
                 <img
                   src={images[currentIndex]}
                   alt={`${project.title} preview ${currentIndex + 1}`}
-                  className="h-full w-full object-cover"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
                 {images.length > 1 ? (
@@ -131,14 +137,20 @@ export default function ProjectModal({ project, labels, onClose }) {
                 <h4 className="text-[11px] font-semibold uppercase tracking-[0.26em] text-violet-300/70 sm:text-xs sm:tracking-[0.24em] md:text-sm">
                   {labels?.featuresTitle}
                 </h4>
-                <ul className="grid grid-cols-1 gap-x-3 gap-y-1.5 text-[13px] leading-snug text-slate-300 sm:grid-cols-2 sm:text-sm sm:leading-relaxed">
-                  {project.features?.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 inline-flex size-1 rounded-full bg-violet-400 sm:size-1.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {renderedFeatureColumns.length ? (
+                  <div className="flex flex-col gap-1.5 text-[13px] leading-snug text-slate-300 sm:flex-row sm:gap-3 sm:text-sm sm:leading-relaxed">
+                    {renderedFeatureColumns.map((column, columnIndex) => (
+                      <ul key={`features-column-${columnIndex}`} className="flex flex-1 flex-col gap-1.5">
+                        {column.map((item) => (
+                          <li key={item} className="flex items-start gap-2">
+                            <span className="mt-1 inline-flex size-1 rounded-full bg-violet-400 sm:size-1.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
+                  </div>
+                ) : null}
               </div>
               <div className="space-y-1.5">
                 <h4 className="text-[11px] font-semibold uppercase tracking-[0.26em] text-violet-300/70 sm:text-xs sm:tracking-[0.24em] md:text-sm">
@@ -156,25 +168,7 @@ export default function ProjectModal({ project, labels, onClose }) {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch justify-end gap-2 sm:flex-row sm:items-center sm:justify-between lg:justify-end">
-              {hasLink ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-400/60 px-3.5 py-1.5 text-[13px] font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 sm:px-4 sm:py-2 sm:text-sm"
-                >
-                  {labels?.primaryActionButton ?? 'View Project'}
-                </a>
-              ) : (
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-slate-700/60 px-3.5 py-1.5 text-[13px] font-semibold text-slate-500 opacity-60 sm:px-4 sm:py-2 sm:text-sm"
-                >
-                  {labels?.comingSoonLabel ?? 'Coming soon'}
-                </button>
-              )}
+            <div className="flex justify-end">
               <button
                 type="button"
                 onClick={onClose}

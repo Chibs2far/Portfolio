@@ -5,9 +5,17 @@ import profileAvatarImg from '../assets/images/profile-avatar.png'
 import portfolioExperienceImg from '../assets/images/projects/portfolio-experience.jpg'
 import portfolioExperienceImg2 from '../assets/images/projects/portfolio-experience-2.jpg'
 import portfolioExperienceImg3 from '../assets/images/projects/portfolio-experience-3.jpg'
-import microAnimationsImg from '../assets/images/projects/micro-animations.jpg'
-import microAnimationsImg2 from '../assets/images/projects/micro-animations-2.jpg'
-import microAnimationsImg3 from '../assets/images/projects/micro-animations-3.jpg'
+import attendanceScreenImg from '../assets/images/projects/screen.png'
+import attendanceScreenCopyImg from '../assets/images/projects/screen kopyası.png'
+import attendanceScreenCopy2Img from '../assets/images/projects/screen kopyası 2.png'
+import attendanceScreenCopy3Img from '../assets/images/projects/screen kopyası 3.png'
+import attendanceScreenCopy4Img from '../assets/images/projects/screen kopyası 4.png'
+import attendanceScreenCopy5Img from '../assets/images/projects/screen kopyası 5.png'
+import attendanceScreenCopy6Img from '../assets/images/projects/screen kopyası 6.png'
+import assetInventoryImg1 from '../assets/images/projects/WhatsApp Image 2025-11-05 at 15.19.19.jpeg'
+import assetInventoryImg2 from '../assets/images/projects/WhatsApp Image 2025-11-05 at 15.26.00.jpeg'
+import assetInventoryImg3 from '../assets/images/projects/fasfasfvb.jpeg'
+import posControlPanelImg from '../assets/images/projects/Ekran Resmi 2025-11-04 15.11.09.png'
 import divizyonLogo from '../assets/images/experiences/divizyon_logo.jpeg'
 import halkbankLogo from '../assets/images/experiences/halkbank_logo.jpeg'
 import inspireLogo from '../assets/images/experiences/inspire_foundation_malta__logo.jpeg'
@@ -133,58 +141,67 @@ export const dictionaries = {
       },
       cards: [
         {
-          title: 'Portfolio Deneyimi',
+          title: 'Zimmet & Envanter Yönetim Sistemi',
           description:
-            'Kişisel marka hikayesini görsel etkileşimlerle anlatan landing page. GSAP ile sahne geçişleri ve scroll tabanlı animasyonlar içeriyor.',
+            'Gerçek zamanlı zimmet yönetimi; dashboard metrikleri, canlı talepler ve raporlama ile operasyon görünürlüğü.',
           timeframe: '2024',
-          stack: ['React', 'GSAP', 'TailwindCSS'],
-          gallery: [portfolioExperienceImg, portfolioExperienceImg2, portfolioExperienceImg3],
+          stack: ['React', 'TypeScript', 'Socket.IO'],
+          gallery: [assetInventoryImg1, assetInventoryImg2, assetInventoryImg3],
           longDescription:
-            'Marka hikayesini anlatan tek sayfalık deneyim; animasyonlu sahneler ve kullanıcı etkileşimini takip eden içerik blokları ile destekleniyor.',
+            'Socket.IO bildirimleri, bakım ve raporlama süreçlerini tek yerde toplayan uçtan uca zimmet ve envanter çözümü.',
           features: [
-            'Scroll bazlı sahne geçişleri ve hikaye anlatımı',
-            'Bileşen tabanlı animasyon sistemi',
-            'İçerik yönetimi için modüler veri yapısı',
+            'Gerçek zamanlı talepler ve otomatik zimmet akışı.',
+            'API’den beslenen metrik panosu ve trend grafikleri.',
+            'JWT tabanlı rol ve rota kontrolü.',
+            'Kategori/ürün yönetimi, zimmet atama ve bakım takibi.',
+            'Detaylı filtreleme ve CSV dışa aktarma.',
+            'FullCalendar ile etkinlik oluşturma ve sürükle-bırak takvim.',
           ],
-          technologies: ['React', 'GSAP', 'Tailwind CSS', 'Vite'],
+          technologies: ['React', 'TypeScript', 'Vite', 'Node.js', 'PostgreSQL', 'Socket.IO'],
           link: 'https://github.com/furkanduzkopru',
-          image: portfolioExperienceImg,
+          image: assetInventoryImg1,
         },
         {
-          title: 'Eğitim Platformu Dashboard',
+          title: 'Pos Control Panel',
           description:
-            'Gerçek zamanlı veri görselleştirmeleri ve özelleştirilebilir bileşenlerle tasarlanmış yönetim paneli prototipi.',
-          timeframe: '2023',
-          stack: ['React', 'Recharts', 'Radix UI'],
-          gallery: [educationDashboardImg, educationDashboardImg2, educationDashboardImg3],
+            'Sunmi POS terminalleri için Kotlin ve Jetpack Compose kullanılarak geliştirilmiş yerel (native) bir Android yönetim uygulamasıdır.',
+          timeframe: '2024',
+          stack: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
+          gallery: [posControlPanelImg],
           longDescription:
-            'Eğitim yöneticileri için eğitmen, modül ve öğrenci performanslarını tek panelden takip etmeyi kolaylaştıran bir kontrol merkezi.',
+            'Bu kontrol paneli, teknisyenlerin ve son kullanıcıların cihazı hızla test etmesini sağlamak için tasarlanmıştır. Uygulama, tek bir modern arayüz üzerinden üç ana işlevi yönetir.',
           features: [
-            'Gerçek zamanlı grafikler ve ilerleme göstergeleri',
-            'Modüler widget yapısı ile özelleştirilebilir pano',
-            'Karanlık/aydınlık tema desteği',
+            'Yazıcı Yönetimi: SunmiPrinterXManager API\'si ile doğrudan entegre olarak yazıcı bağlantı durumunu izler, test baskısı alır ve girilen URL\'leri anında QR kod olarak yazdırır.',
+            'QR Tarama: Cihazın dahili kamerasını kullanarak QR kod okutur, sonucu kaydeder ve taranan bağlantıyı açma seçeneği sunar.',
           ],
-          technologies: ['React', 'Recharts', 'Radix UI', 'TypeScript'],
+          technologies: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
           link: null,
-          image: educationDashboardImg,
+          image: posControlPanelImg,
         },
         {
-          title: 'Mikro Animasyon Kütüphanesi',
+          title: 'NFC Yoklama Otomasyonu',
           description:
-            'Çeşitli mikro etkileşimleri tek çatı altında toplayan yeniden kullanılabilir animasyon paketleri.',
-          timeframe: '2022',
-          stack: ['React', 'GSAP', 'Storybook'],
-          gallery: [microAnimationsImg, microAnimationsImg2, microAnimationsImg3],
-          longDescription:
-            'Ürün ekiplerinin hızlıca prototip hazırlayabilmesi için tasarlanmış, yeniden kullanılabilir animasyon koleksiyonu ve Storybook dokümantasyonu.',
-          features: [
-            'GSAP tabanlı 20+ mikro etkileşim',
-            'Storybook ile canlı dokümantasyon',
-            'Temalandırılabilir mimari ve API',
+            'Üniversiteler için tasarlanmış çift rollü (Akademisyen/Öğrenci) NFC tabanlı yoklama otomasyonu.',
+          timeframe: '2024',
+          stack: ['React Native', 'Node.js', 'PostgreSQL', 'TypeScript', 'NFC', 'JWT'],
+          gallery: [
+            attendanceScreenCopy3Img,
+            attendanceScreenImg,
+            attendanceScreenCopyImg,
+            attendanceScreenCopy2Img,
+            attendanceScreenCopy4Img,
+            attendanceScreenCopy5Img,
+            attendanceScreenCopy6Img,
           ],
-          technologies: ['React', 'GSAP', 'Storybook', 'Framer Motion'],
+          longDescription:
+            'Akademisyen ve öğrenciler için iki ayrı arayüz sunan bu otomasyon, canlı NFC oturumlarıyla yoklamayı otomatikleştirirken raporlamayı tek panelde toplar.',
+          features: [
+            'Akademisyenler: Canlı NFC oturumları başlatabilir, öğrencileri anlık olarak kaydedebilir ve katılım raporlarını görüntüleyebilir.',
+            'Öğrenciler: Grafikler ve interaktif takvim üzerinden devamsızlık durumlarını, ders programlarını ve kalan haklarını takip edebilir.',
+          ],
+          technologies: ['React Native', 'Node.js', 'PostgreSQL', 'TypeScript', 'NFC', 'JWT'],
           link: null,
-          image: microAnimationsImg,
+          image: attendanceScreenCopy3Img,
         },
       ],
     },
@@ -324,58 +341,67 @@ export const dictionaries = {
       },
       cards: [
         {
-          title: 'Portfolio Experience',
+          title: 'Asset & Inventory Management System',
           description:
-            'A landing page that tells a personal brand story with visual interactions. Features scene transitions and scroll-based animations powered by GSAP.',
+            'Real-time asset tracking with dashboard metrics, live requests, and reporting for full operational visibility.',
           timeframe: '2024',
-          stack: ['React', 'GSAP', 'TailwindCSS'],
-          gallery: [portfolioExperienceImg, portfolioExperienceImg2, portfolioExperienceImg3],
+          stack: ['React', 'TypeScript', 'Socket.IO'],
+          gallery: [assetInventoryImg1, assetInventoryImg2, assetInventoryImg3],
           longDescription:
-            'A narrative-driven personal portfolio experience with scroll-triggered scenes, parallax layers, and reusable animated components.',
+            'An end-to-end platform that unifies socket-powered requests, maintenance workflows, and analytics into a single inventory hub.',
           features: [
-            'Story-driven layout with progressive disclosure',
-            'Reusable animation primitives powered by GSAP',
-            'Content model designed for rapid updates',
+            'Live requests with automatic assignment via Socket.IO.',
+            'API-driven metrics dashboard and trend visualisations.',
+            'Route-level JWT and role-based access control.',
+            'Category/product admin, assignment, returns, maintenance.',
+            'Granular filters with CSV export.',
+            'FullCalendar events with create/edit/drag-and-drop.',
           ],
-          technologies: ['React', 'GSAP', 'Tailwind CSS', 'Vite'],
+          technologies: ['React', 'TypeScript', 'Vite', 'Node.js', 'PostgreSQL', 'Socket.IO'],
           link: 'https://github.com/furkanduzkopru',
-          image: portfolioExperienceImg,
+          image: assetInventoryImg1,
         },
         {
-          title: 'Education Platform Dashboard',
+          title: 'Pos Control Panel',
           description:
-            'A management dashboard prototype featuring real-time data visualisations and customisable components.',
-          timeframe: '2023',
-          stack: ['React', 'Recharts', 'Radix UI'],
-          gallery: [educationDashboardImg, educationDashboardImg2, educationDashboardImg3],
+            'A native Android management app built with Kotlin and Jetpack Compose for Sunmi POS terminals.',
+          timeframe: '2024',
+          stack: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
+          gallery: [posControlPanelImg],
           longDescription:
-            'A control center for education teams to monitor instructors, modules, and learner performance from a single unified interface.',
+            'Designed so technicians and end users can test devices quickly, this control panel unifies three core functions inside a single modern interface.',
           features: [
-            'Live analytics and progress charts',
-            'Widget-based layout with drag-and-drop customisation',
-            'Light and dark theme support out of the box',
+            "Printer Management: Integrates directly with the SunmiPrinterXManager API to monitor printer state, run test prints, and instantly render URLs as QR codes.",
+            'QR Scanning: Uses the built-in camera to scan QR codes, log the result, and offer to open the scanned link.',
           ],
-          technologies: ['React', 'Recharts', 'Radix UI', 'TypeScript'],
+          technologies: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
           link: null,
-          image: educationDashboardImg,
+          image: posControlPanelImg,
         },
         {
-          title: 'Micro Animation Library',
+          title: 'NFC Attendance Automation',
           description:
-            'Reusable animation packs that consolidate a wide range of micro-interactions in a single place.',
-          timeframe: '2022',
-          stack: ['React', 'GSAP', 'Storybook'],
-          gallery: [microAnimationsImg, microAnimationsImg2, microAnimationsImg3],
-          longDescription:
-            'A collection of reusable motion presets to speed up prototyping, packaged with Storybook for live documentation.',
-          features: [
-            '20+ GSAP-powered micro animations',
-            'Storybook playground with controls',
-            'Theme-aware API with tokens',
+            'A dual-role (Faculty/Student) NFC attendance automation system built for universities.',
+          timeframe: '2024',
+          stack: ['React Native', 'Node.js', 'PostgreSQL', 'TypeScript', 'NFC', 'JWT'],
+          gallery: [
+            attendanceScreenCopy3Img,
+            attendanceScreenImg,
+            attendanceScreenCopyImg,
+            attendanceScreenCopy2Img,
+            attendanceScreenCopy4Img,
+            attendanceScreenCopy5Img,
+            attendanceScreenCopy6Img,
           ],
-          technologies: ['React', 'GSAP', 'Storybook', 'Framer Motion'],
+          longDescription:
+            'Paired faculty and student experiences automate attendance via live NFC sessions while consolidating analytics inside a single dashboard.',
+          features: [
+            'Faculty: Launch live NFC sessions, capture students in real time, and review attendance reports.',
+            'Students: Track absences, class schedules, and remaining allowances via charts and an interactive calendar.',
+          ],
+          technologies: ['React Native', 'Node.js', 'PostgreSQL', 'TypeScript', 'NFC', 'JWT'],
           link: null,
-          image: microAnimationsImg,
+          image: attendanceScreenCopy3Img,
         },
       ],
     },
