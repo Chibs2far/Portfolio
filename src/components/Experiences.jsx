@@ -11,7 +11,7 @@ export default function Experiences() {
   }
 
   return (
-    <section id="experience" className="space-y-10">
+    <section id="experiences" className="space-y-10">
       <div className="space-y-3">
         <p className="text-base font-semibold uppercase tracking-[0.28em] text-violet-300/80 sm:text-lg">
           {experiences?.sectionLabel}

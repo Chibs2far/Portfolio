@@ -5,17 +5,17 @@ import profileAvatarImg from '../assets/images/profile-avatar.png'
 import portfolioExperienceImg from '../assets/images/projects/portfolio-experience.jpg'
 import portfolioExperienceImg2 from '../assets/images/projects/portfolio-experience-2.jpg'
 import portfolioExperienceImg3 from '../assets/images/projects/portfolio-experience-3.jpg'
-import attendanceScreenImg from '../assets/images/projects/screen.png'
-import attendanceScreenCopyImg from '../assets/images/projects/screen kopyası.png'
-import attendanceScreenCopy2Img from '../assets/images/projects/screen kopyası 2.png'
-import attendanceScreenCopy3Img from '../assets/images/projects/screen kopyası 3.png'
-import attendanceScreenCopy4Img from '../assets/images/projects/screen kopyası 4.png'
-import attendanceScreenCopy5Img from '../assets/images/projects/screen kopyası 5.png'
-import attendanceScreenCopy6Img from '../assets/images/projects/screen kopyası 6.png'
-import assetInventoryImg1 from '../assets/images/projects/WhatsApp Image 2025-11-05 at 15.19.19.jpeg'
-import assetInventoryImg2 from '../assets/images/projects/WhatsApp Image 2025-11-05 at 15.26.00.jpeg'
-import assetInventoryImg3 from '../assets/images/projects/fasfasfvb.jpeg'
-import posControlPanelImg from '../assets/images/projects/Ekran Resmi 2025-11-04 15.11.09.png'
+import attendanceScreenImg from '../assets/images/projects/nfc-screen-00.png'
+import attendanceScreenCopyImg from '../assets/images/projects/nfc-screen-01.png'
+import attendanceScreenCopy2Img from '../assets/images/projects/nfc-screen-02.png'
+import attendanceScreenCopy3Img from '../assets/images/projects/nfc-screen-03.png'
+import attendanceScreenCopy4Img from '../assets/images/projects/nfc-screen-04.png'
+import attendanceScreenCopy5Img from '../assets/images/projects/nfc-screen-05.png'
+import attendanceScreenCopy6Img from '../assets/images/projects/nfc-screen-06.png'
+import assetInventoryImg1 from '../assets/images/projects/asset-inventory-01.jpeg'
+import assetInventoryImg2 from '../assets/images/projects/asset-inventory-02.jpeg'
+import assetInventoryImg3 from '../assets/images/projects/asset-inventory-03.jpeg'
+import posControlPanelImg from '../assets/images/projects/pos-control-panel.png'
 import divizyonLogo from '../assets/images/experiences/divizyon_logo.jpeg'
 import halkbankLogo from '../assets/images/experiences/halkbank_logo.jpeg'
 import inspireLogo from '../assets/images/experiences/inspire_foundation_malta__logo.jpeg'
@@ -28,6 +28,7 @@ export const dictionaries = {
       nav: [
         { href: '#top', label: 'Ana Sayfa' },
         { href: '#about', label: 'Hakkımda' },
+        { href: '#experiences', label: 'Deneyimler' },
         { href: '#projects', label: 'Projeler' },
         { href: '#contact', label: 'İletişim' },
       ],
@@ -70,7 +71,7 @@ export const dictionaries = {
       profileCard: {
         name: 'Furkan Düzköprü',
         title: 'Software Developer',
-        handle: 'furkandüzköprü',
+        handle: 'furkanduzkopru',
         status: 'Freelance projelere açık',
         contactText: 'İletişime geç',
         avatar: profileAvatarImg,
@@ -158,11 +159,12 @@ export const dictionaries = {
             'FullCalendar ile etkinlik oluşturma ve sürükle-bırak takvim.',
           ],
           technologies: ['React', 'TypeScript', 'Vite', 'Node.js', 'PostgreSQL', 'Socket.IO'],
-          link: 'https://github.com/furkanduzkopru',
+          link: null,
           image: assetInventoryImg1,
+          useDarkOverlay: true,
         },
         {
-          title: 'Pos Control Panel',
+          title: 'Sunmi POS Kontrol Paneli',
           description:
             'Sunmi POS terminalleri için Kotlin ve Jetpack Compose kullanılarak geliştirilmiş yerel (native) bir Android yönetim uygulamasıdır.',
           timeframe: '2024',
@@ -177,6 +179,7 @@ export const dictionaries = {
           technologies: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
           link: null,
           image: posControlPanelImg,
+          useDarkOverlay: true,
         },
         {
           title: 'NFC Yoklama Otomasyonu',
@@ -228,6 +231,7 @@ export const dictionaries = {
       nav: [
         { href: '#top', label: 'Home' },
         { href: '#about', label: 'About' },
+        { href: '#experiences', label: 'Experience' },
         { href: '#projects', label: 'Projects' },
         { href: '#contact', label: 'Contact' },
       ],
@@ -236,8 +240,8 @@ export const dictionaries = {
       badge: 'Software Developer',
       lines: [
         "Hi, I'm Furkan.",
-        'I infuse static ideas.',
-        'with dynamic energy.',
+        'I bring dynamic energy',
+        'to every static idea.',
       ],
       description:
         'Scroll down and explore my projects to see how I use technology as a tool to bring ideas to life.',
@@ -358,11 +362,12 @@ export const dictionaries = {
             'FullCalendar events with create/edit/drag-and-drop.',
           ],
           technologies: ['React', 'TypeScript', 'Vite', 'Node.js', 'PostgreSQL', 'Socket.IO'],
-          link: 'https://github.com/furkanduzkopru',
+          link: null,
           image: assetInventoryImg1,
+          useDarkOverlay: true,
         },
         {
-          title: 'Pos Control Panel',
+          title: 'Sunmi POS Control Panel',
           description:
             'A native Android management app built with Kotlin and Jetpack Compose for Sunmi POS terminals.',
           timeframe: '2024',
@@ -377,6 +382,7 @@ export const dictionaries = {
           technologies: ['Jetpack Compose', 'Android (Native)', 'Kotlin'],
           link: null,
           image: posControlPanelImg,
+          useDarkOverlay: true,
         },
         {
           title: 'NFC Attendance Automation',

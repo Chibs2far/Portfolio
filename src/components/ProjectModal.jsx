@@ -79,7 +79,7 @@ export default function ProjectModal({ project, labels, onClose }) {
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex flex-col">
-          <div className="relative flex w-full items-center justify-center overflow-hidden bg-slate-900/60 h-[120px] sm:h-[180px] md:h-[230px] lg:h-[280px]">
+          <div className="relative hidden w-full items-center justify-center overflow-hidden bg-slate-900/60 sm:flex sm:h-[180px] md:h-[230px] lg:h-[280px]">
             {images.length ? (
               <>
                 <img

@@ -30,12 +30,11 @@ export default function Projects() {
         {projectsContent?.heading}
       </h2>
       <div className="grid gap-6 lg:grid-cols-3">
-        {cards.map((project, index) => {
+        {cards.map((project) => {
           const cover = project.image
-          const overlayClass =
-            index <= 1
-              ? 'bg-slate-950/80 transition group-hover:bg-slate-950/70'
-              : 'bg-slate-950/55 transition group-hover:bg-slate-950/45'
+          const overlayClass = project.useDarkOverlay
+            ? 'bg-slate-950/80 transition group-hover:bg-slate-950/70'
+            : 'bg-slate-950/55 transition group-hover:bg-slate-950/45'
           return (
             <article
               key={project.title}
