@@ -204,9 +204,9 @@ export const dictionaries = {
     },
     contact: {
       sectionLabel: 'İletişim',
-      heading: 'Yeni projeler ve freelance işbirlikleri için iletişime geç.',
+      heading: 'Birlikte Çalışmak veya Projeleriniz İçin İletişime Geçin.',
       body:
-        'Fikirlerini paylaşmak ya da potansiyel proje detaylarını konuşmak istersen, kısa bir not bırakman yeterli.',
+        'İster ekibinizin bir parçası, ister proje bazlı bir çözüm ortağı olarak fikirlerinizi gerçeğe dönüştürmek için benimle iletişime geçebilirsiniz.',
       emailLabel: 'E-posta',
       emailValue: 'furkanduzkopru@gmail.com',
       phoneLabel: 'Telefon',
@@ -407,9 +407,9 @@ export const dictionaries = {
     },
     contact: {
       sectionLabel: 'Contact',
-      heading: 'Reach out for new projects or freelance collaborations.',
+      heading: "Let's Work Together",
       body:
-        'Share your ideas or project details and we can schedule a quick chat about the next steps.',
+        'Whether you need another teammate or a project-based partner, reach out and we can turn your ideas into reality.',
       emailLabel: 'Email',
       emailValue: 'furkanduzkopru@gmail.com',
       phoneLabel: 'Phone',

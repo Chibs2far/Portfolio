@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import GooeyNav from './GooeyNav'
+import ShinyText from './ShinyText.jsx'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { Linkedin } from 'lucide-react'
 
 const languages = [
   { code: 'tr', label: 'TR' },
@@ -176,7 +178,7 @@ export default function Header() {
       {/* Header'ın ana içeriği (Logo, Dil, Hamburger) */}
       <div className="mx-auto flex max-w-5xl items-center gap-3 px-6 py-4 text-sm font-medium text-slate-200 sm:gap-6">
         <a href="#top" className="text-lg font-semibold tracking-tight text-violet-300" onClick={closeMenu}>
-          {siteTitle}
+          <ShinyText text={siteTitle} speed={4} className="text-violet-300" />
         </a>
         <div className="flex flex-1 items-center justify-end gap-3 sm:gap-4">
           <div className="hidden flex-1 justify-center sm:flex">
@@ -190,6 +192,15 @@ export default function Header() {
             />
           </div>
           {renderLanguageSwitcher('inline-flex shrink-0')}
+          <a
+            href="https://www.linkedin.com/in/furkanduzkopru/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn profile"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-violet-500/30 bg-slate-950/60 text-violet-200 shadow-[0_12px_30px_rgba(76,29,149,0.35)] transition hover:-translate-y-0.5 hover:text-violet-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+          >
+            <Linkedin className="size-4" />
+          </a>
           <button
             type="button"
             onClick={toggleMenu}
