@@ -213,10 +213,7 @@ export const dictionaries = {
       phoneValue: '+90 542 413 9180',
       cta: 'Mesaj Gönder',
     },
-    footer: {
-      rights: 'Furkan. Tüm hakları saklıdır.',
-      stack: 'React · Tailwind CSS · GSAP ile oluşturuldu.',
-    },
+   
   },
   en: {
     header: {
@@ -407,7 +404,7 @@ export const dictionaries = {
     },
     contact: {
       sectionLabel: 'Contact',
-      heading: "Let's Work Together",
+      heading: 'Collaborate or Reach Out for Your Projects.',
       body:
         'Whether you need another teammate or a project-based partner, reach out and we can turn your ideas into reality.',
       emailLabel: 'Email',
@@ -416,9 +413,6 @@ export const dictionaries = {
       phoneValue: '+90 542 413 9180',
       cta: 'Send a Message',
     },
-    footer: {
-      rights: "Furkan. All rights reserved.",
-      stack: 'Built with React · Tailwind CSS · GSAP.',
-    },
+   
   },
 }
